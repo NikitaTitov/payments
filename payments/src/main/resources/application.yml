@@ -1,0 +1,6 @@
+app:
+  cloud-payments:
+    singleStagePayUrl: 'https://api.cloudpayments.ru/payments/cards/charge'
+    doubleStagePayUrl: 'https://api.cloudpayments.ru/payments/cards/auth'
+    publicId: ${PAYMENT_PUBLIC_ID}
+    apiKey: ${PAYMENT_API_KEY}

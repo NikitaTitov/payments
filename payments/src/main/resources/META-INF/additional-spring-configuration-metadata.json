@@ -1,0 +1,24 @@
+{
+  "properties": [
+    {
+      "name": "app.cloud-payments.singleStagePayUrl",
+      "type": "java.lang.String",
+      "description": "Url for one stage payments."
+    },
+    {
+      "name": "app.cloud-payments.doubleStagePayUrl",
+      "type": "java.lang.String",
+      "description": "Url for double stage payments."
+    },
+    {
+      "name": "app.cloud-payments.apiKey",
+      "type": "java.lang.String",
+      "description": "Apikey for accessing to cloud payments."
+    },
+    {
+      "name": "app.cloud-payments.publicId",
+      "type": "java.lang.String",
+      "description": "Public id of application in cloud payments."
+    }
+  ]
+}
