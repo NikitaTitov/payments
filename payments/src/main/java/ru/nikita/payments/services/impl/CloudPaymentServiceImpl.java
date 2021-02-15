@@ -6,7 +6,7 @@ import dto.payments.PaymentRequest;
 import dto.payments.PaymentResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.nikita.payments.repositories.CloudPaymentRepository;
+import ru.nikita.payments.clients.CloudPaymentClient;
 import ru.nikita.payments.services.CloudPaymentService;
 
 import java.util.Optional;
@@ -15,30 +15,30 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class CloudPaymentServiceImpl implements CloudPaymentService {
 
-	private final CloudPaymentRepository cloudPaymentRepository;
+	private final CloudPaymentClient cloudPaymentClient;
 
 	@Override
 	public Optional<PaymentResponse> payWithTwoSteps(PaymentRequest request) {
-		return cloudPaymentRepository.payWithTwoSteps(request);
+		return cloudPaymentClient.payWithTwoSteps(request);
 	}
 
 	@Override
 	public Optional<PaymentResponse> payWithSingleStep(PaymentRequest request) {
-		return cloudPaymentRepository.payWithSingleStep(request);
+		return cloudPaymentClient.payWithSingleStep(request);
 	}
 
 	@Override
 	public Optional<PaymentResponse> confirmPayWithTwoSteps(PaymentConfirmRequest request) {
-		return cloudPaymentRepository.confirmPayWithTwoSteps(request);
+		return cloudPaymentClient.confirmPayWithTwoSteps(request);
 	}
 
 	@Override
 	public Optional<PaymentResponse> cancelPay(PaymentCancelRequest request) {
-		return cloudPaymentRepository.cancelPay(request);
+		return cloudPaymentClient.cancelPay(request);
 	}
 
 	@Override
 	public Optional<PaymentResponse> refundPay(PaymentCancelRequest request) {
-		return cloudPaymentRepository.refundPay(request);
+		return cloudPaymentClient.refundPay(request);
 	}
 }

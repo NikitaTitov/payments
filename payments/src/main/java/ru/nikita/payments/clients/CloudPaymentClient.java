@@ -1,4 +1,4 @@
-package ru.nikita.payments.repositories;
+package ru.nikita.payments.clients;
 
 import dto.payments.PaymentCancelRequest;
 import dto.payments.PaymentConfirmRequest;
@@ -15,7 +15,7 @@ import java.util.Optional;
 		url = "https://api.cloudpayments.ru/payments",
 		configuration = CloudPaymentFeignClientConfiguration.class
 )
-public interface CloudPaymentRepository {
+public interface CloudPaymentClient {
 
 	@PostMapping("/cards/auth")
 	Optional<PaymentResponse> payWithTwoSteps(PaymentRequest request);

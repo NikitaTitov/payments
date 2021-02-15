@@ -1,3 +1,3 @@
 rootProject.name = 'mega-cloud'
 
-include 'payments', 'library', 'server-discovery'
+include 'payments', 'library', 'server-discovery', 'auth'
