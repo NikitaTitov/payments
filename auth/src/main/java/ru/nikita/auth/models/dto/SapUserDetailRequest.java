@@ -1,12 +1,18 @@
-package ru.nikita.auth.models.dto.update;
+package ru.nikita.auth.models.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-public class SapCdcUpdateUserPhoneOrEmailRequest {
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class SapUserDetailRequest {
 
-	private final String apiKey;
-	private final String lang;
+	private String apiKey;
+	private String lang;
 	/**
 	 * Phone number for sending verification code. This parameter or {@link #email} must be sent
 	 */
@@ -29,4 +35,14 @@ public class SapCdcUpdateUserPhoneOrEmailRequest {
 	 */
 	private boolean httpStatusCodes = false;
 
+	private String regToken;
+
+	private String vToken;
+	private int code;
+	private String CID;
+	private String include;
+	private String regSource;
+	private int sessionExpiration;
+	private String targetEnv;
+	private String context;
 }

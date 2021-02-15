@@ -1,10 +1,6 @@
-package ru.nikita.auth.models.dto.login;
+package ru.nikita.auth.models.dto;
 
-import lombok.Data;
-import ru.nikita.auth.models.dto.GigyaAccount;
-
-@Data
-public class SapCdcLoginResponse {
+public class SapUserDetailResponse {
 	private String UID;
 	private String UIDSignature;
 	private boolean isNewUser;
@@ -18,5 +14,6 @@ public class SapCdcLoginResponse {
 	private String errorMessage;
 	private String fullEventName;
 	private String time;
-
+	private String vToken;
+	private String code;
 }
